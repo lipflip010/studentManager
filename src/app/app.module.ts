@@ -6,7 +6,8 @@ import {
   MatButtonModule,
   MatSelectModule,
   MatIconModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatTableModule
 } from "@angular/material";
 import { FormsModule } from "@angular/forms";
 
@@ -27,7 +28,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatButtonModule,
     MatSelectModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTableModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

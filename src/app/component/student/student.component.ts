@@ -8,11 +8,12 @@ import { StudentService } from "src/app/service/student.service";
 })
 export class StudentComponent implements OnInit {
   title: String;
-  response
+  displayedColumns: string[] = ["id", "name", "course"];
+  response;
   constructor(private studentService: StudentService) {}
 
   ngOnInit() {
-    this.title = "Overview"
+    this.title = "Overview";
     this.response = this.studentService.getAllStudents();
   }
 }
