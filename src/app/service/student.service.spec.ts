@@ -47,7 +47,9 @@ describe("StudentService", () => {
         tap(() => expect(response).toEqual(testData))
       ).subscribe();
 
-      const request = httpTestingController.expectOne("/students");
+      const request = httpTestingController.expectOne(
+        "http://localhost:8080/students"
+      );
       request.flush(testData);
     });
 

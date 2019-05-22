@@ -10,6 +10,6 @@ export class StudentService {
   constructor(public http:HttpClient) { }
 
   public getAllStudents(): Observable<Array<Student>>{
-    return this.http.get<Array<Student>>('/students');
+    return this.http.get<Array<Student>>('http://localhost:8080/students');
   }
 }
