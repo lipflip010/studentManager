@@ -19,22 +19,30 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
 </div>
-<div class="flex-container">
+<form #studentForm="ngForm" class="flex-container-wrap" *ngIf="showInput" (ngSubmit)="addStudent(studentForm.value)">
   <mat-form-field apparence="standard" class="margin-left">
     <mat-label>Id</mat-label>
-    <input matInput type="text" name="newuserName" id="newuserName" class="form-control">
+    <input matInput ngModel type="number" name="id" class="form-control"
+           required>
   </mat-form-field>
 
   <mat-form-field apparence="standard" class="margin-left">
     <mat-label>Name</mat-label>
-    <input matInput type="text" name="newuserAge" id="newAge" class="form-control">
-  </mat-form-field>
-  <mat-form-field apparence="standard" class="margin-left">
-    <mat-label>Kurse</mat-label>
-    <input matInput type="text" name="newuserAge" id="newAge" class="form-control">
+    <input matInput ngModel type="text" name="name"
+           class="form-control" required>
   </mat-form-field>
 
-</div>
+  <mat-form-field apparence="standard" class="margin-left">
+    <mat-label>Kurse</mat-label>
+    <input matInput ngModel type="text" name="course"
+           class="form-control" required>
+  </mat-form-field>
+
+  <button mat-raised-button type="submit" color="accent" class="margin-left"
+          [disabled]="studentForm.invalid">Speichern
+  </button>
+</form>
+
 <div class="flex-container justify-content-end">
-  <button mat-mini-fab color="accent" class="button-padding">+</button>
+  <button mat-mini-fab color="accent" class="button-padding" *ngIf="!showInput" (click)="showInput=true">+</button>
 </div>
