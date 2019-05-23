@@ -1,7 +1,7 @@
 // theme.scss
 @import '~@angular/material/theming';
-$my-theme-primary: mat-palette($mat-deep-orange);
-$my-theme-accent : mat-palette($mat-amber);
+$my-theme-primary: mat-palette($mat-deep-orange,600);
+$my-theme-accent : mat-palette($mat-orange,500);
 $my-theme-warn   : mat-palette($mat-red);
 $my-theme: mat-light-theme(
     $my-theme-primary,
