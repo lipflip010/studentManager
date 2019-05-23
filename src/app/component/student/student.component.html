@@ -19,6 +19,22 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
 </div>
+<div class="flex-container">
+  <mat-form-field apparence="standard" class="margin-left">
+    <mat-label>Id</mat-label>
+    <input matInput type="text" name="newuserName" id="newuserName" class="form-control">
+  </mat-form-field>
+
+  <mat-form-field apparence="standard" class="margin-left">
+    <mat-label>Name</mat-label>
+    <input matInput type="text" name="newuserAge" id="newAge" class="form-control">
+  </mat-form-field>
+  <mat-form-field apparence="standard" class="margin-left">
+    <mat-label>Kurse</mat-label>
+    <input matInput type="text" name="newuserAge" id="newAge" class="form-control">
+  </mat-form-field>
+
+</div>
 <div class="flex-container justify-content-end">
   <button mat-mini-fab color="accent" class="button-padding">+</button>
 </div>
