@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { StudentService } from "src/app/service/student.service";
+import { Observable } from 'rxjs';
+import { Student } from 'src/app/model/student.model';
 
 @Component({
   selector: "app-student",
@@ -9,7 +11,10 @@ import { StudentService } from "src/app/service/student.service";
 export class StudentComponent implements OnInit {
   title: String;
   displayedColumns: string[] = ["id", "name", "course"];
-  response;
+  response:Observable<Student[]>;
+
+
+
   constructor(private studentService: StudentService) {}
 
   ngOnInit() {
